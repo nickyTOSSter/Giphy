@@ -1,7 +1,5 @@
 import Foundation
 
-// Сетевой слой, необходим для загрузки гифок из сети
-// Возвращает сетевую модель GiphyAPIModel
 final class GiphyURLSession: GiphyURLSessionProtocol {
     private let urlSession: URLSession
 
@@ -17,7 +15,7 @@ final class GiphyURLSession: GiphyURLSessionProtocol {
         urlComponents.host = "api.giphy.com"
         urlComponents.path = "/v1/gifs/random"
         urlComponents.queryItems = [
-            .init(name: "api_key", value: "3kc6OFgsZGKURypdRNAiXhK2r5gnQaVs"),
+            .init(name: "api_key", value: "djptbIcNGXy2dpv7ayzCKb2UrwuyxkKU"),
             .init(name: "tag", value: ""),
             .init(name: "rating", value: "g")
         ]

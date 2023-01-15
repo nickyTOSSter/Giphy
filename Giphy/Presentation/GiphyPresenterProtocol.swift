@@ -1,13 +1,12 @@
 import UIKit
 
-// Протокол для общения между View и Presetner слоями
 protocol GiphyPresenterProtocol: AnyObject {
-    // Конструктор слоя Presetner
     init(giphyFactory: GiphyFactoryProtocol)
 
-    // Метод получения случайной гифки
+    func restart()
     func fetchNextGiphy()
-
-    // Сохранение гифки в файлы
     func saveGif(_ image: UIImage?)
+    func numberOfShownGifs() -> Int
+    func numberOfLikedGifs() -> Int
+    func gifDisplayLimitHasBeenReached() -> Bool
 }
