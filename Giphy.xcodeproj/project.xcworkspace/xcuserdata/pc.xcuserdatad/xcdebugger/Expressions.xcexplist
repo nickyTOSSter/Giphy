@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "GiphyViewController.viewDidLoad():GiphyViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "UIFont(name: &quot;YSDisplayMedium.ttf&quot;, size: 40)">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>

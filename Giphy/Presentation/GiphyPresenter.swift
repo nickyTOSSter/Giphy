@@ -4,14 +4,12 @@ import Photos
 
 final class GiphyPresenter: GiphyPresenterProtocol {
     private var giphyFactory: GiphyFactoryProtocol
-    
-    weak var viewController: GiphyViewControllerProtocol?
-    
     private var showdGifCounter = 0
     private var likedGifCounter = 0
+
+    weak var viewController: GiphyViewControllerProtocol?
     
     // MARK: - GiphyPresenterProtocol
-    
     init(giphyFactory: GiphyFactoryProtocol = GiphyFactory()) {
         self.giphyFactory = giphyFactory
         self.giphyFactory.delegate = self
@@ -22,7 +20,6 @@ final class GiphyPresenter: GiphyPresenterProtocol {
         likedGifCounter = 0
         fetchNextGiphy()
     }
-
     
     func fetchNextGiphy() {
         viewController?.showLoader()
@@ -52,15 +49,11 @@ final class GiphyPresenter: GiphyPresenterProtocol {
     func gifDisplayLimitHasBeenReached() -> Bool {
         return showdGifCounter == 10
     }
-    
-    
-    
 }
 
 // MARK: - GiphyFactoryDelegate
 
 extension GiphyPresenter: GiphyFactoryDelegate {
-    
     func didRecieveNextGiphy(_ giphy: GiphyModel) {
         let image = UIImage.gif(url: giphy.url)
         DispatchQueue.main.async { [weak self] in
